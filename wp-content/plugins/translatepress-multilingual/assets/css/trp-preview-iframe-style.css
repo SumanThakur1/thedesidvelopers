@@ -1,0 +1,78 @@
+/*
+    String editor button
+*/
+
+span.trp-edit-translation {
+    width: 30px !important;
+    height: 30px !important;
+    display: inline-block;
+    position: absolute;
+    margin-left: -30px !important;
+    cursor: pointer;
+    pointer-events: auto;
+    color: #fff;
+    min-width: 30px;
+    min-height: 30px;
+    line-height: 1em!important;
+    font-size: 18px;
+    z-index: 5;
+    background: #0085ba!important;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    -webkit-box-shadow: 0 2px 1px rgba(46,68,83,.15);
+    box-shadow: 0 2px 1px rgba(46,68,83,.15);
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 3px;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+}
+
+span.trp-edit-translation:hover {
+    background: #008ec2!important;
+}
+
+span.trp-edit-translation svg {
+    fill: #fff;
+    min-width: 20px;
+    min-height: 20px;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+[data-trp-unpreviewable="trp-unpreviewable"]{
+    cursor: not-allowed !important;
+}
+
+.trp-highlight{
+    outline: 2px solid #e2e4e7;
+}
+
+*[data-trpgettextoriginal] span.trp-edit-translation, .trpgettext-wrap span.trp-edit-translation{
+    background: #00ba3f !important;
+}
+
+*[data-trpgettextoriginal] span.trp-edit-translation:hover, .trpgettext-wrap span.trp-edit-translation:hover{
+    background: #00ce44 !important;
+}
+
+translate-press{
+    pointer-events: all;
+}
+
+.trp-overflow-transform-fixer{
+    transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.trp-overflow-transform-fixer span.trp-edit-translation{
+    position:fixed;
+}
+
+.trp-overflow-inside-fixer span.trp-edit-translation{
+    margin-left:0 !important;
+}

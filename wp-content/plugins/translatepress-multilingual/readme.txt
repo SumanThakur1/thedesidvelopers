@@ -1,0 +1,195 @@
+﻿=== TranslatePress - Translate Multilingual sites ===
+Contributors: cozmoslabs, razvan.mo, madalin.ungureanu, cristophor
+Donate link: https://www.cozmoslabs.com/
+Tags: translate, translation, multilingual, automatic translation, front-end translation, google translate, bilingual
+Requires at least: 3.1.0
+Tested up to: 4.9.1
+Stable tag: 1.1.3
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Easily translate your entire site directly from the front-end and go multilingual, with full support for WooCommerce, complex themes and site builders. Integrates with Google Translate.
+ 
+== Description ==
+
+**Experience a better way to translate your WordPress site and go multilingual, directly from the front-end using a friendly user interface.**
+
+The interface allows you to easily translate the entire page at once, including output from shortcodes, forms and page builders. It also works out of the box with WooCommerce.
+
+Built the WordPress way, TranslatePress - Multilingual is a GPL and self hosted translation plugin, meaning you'll own all your translations, forever.
+
+= Multilingual & Translation Features =
+
+* Translate all your website content directly from the front-end, in a friendly user interface (translation displayed in real-time).
+* Fully compatible with all themes and plugins
+* Live preview of your translated pages, as you edit your translations.
+* Support for both manual and automatic translation (via Google Translate)
+* Ability to translate dynamic strings (gettext) added by WordPress, plugins and themes.
+* Integrates with Google Translate, allowing you to set up Automatic Translation using your own Google API key.
+* Place language switchers anywhere using shortcode **[language-switcher]**, WP menu item or as a floating dropdown.
+* Editorial control allowing you to publish your language only when all your translations are done
+* Conditional display content shortcode based on language [trp_language language="en_US"] English content only [/trp_language]
+* Possibility to edit gettext strings from themes and plugins from english to english, without adding another language. Basically a string-replace functionality.
+
+Note: this plugin uses the Google Translation API to translate the strings on your site. This feature can be enabled or disabled according to your preferences.
+
+Users with administrator rights have access to the following translate settings:
+
+* select default language of the website and one translation language.
+* choose whether language switcher should display languages in their native names or English name
+* force custom links to open in current language
+* enable or disable url subdirectory for the default language
+* enable automatic translation via Google Translate
+
+= Powerful Translation Add-ons =
+
+TranslatePress - Multilingual has a range of premium [Add-ons](https://translatepress.com/?utm_source=wp.org&utm_medium=tp-description-page&utm_campaign=TPFree) that allow you to extend the power of the translation plugin:
+
+**Pro Add-ons** (available in the [PRO version](https://translatepress.com/?utm_source=wp.org&utm_medium=tp-description-page&utm_campaign=TPFree) only)
+
+* [Extra Languages](https://translatepress.com/?utm_source=wp.org&utm_medium=tp-description-page&utm_campaign=TPFree) - allows you to add an unlimited number of translation languages, with the possibility to publish languages later after you complete the translation
+* [SEO Pack](https://translatepress.com/?utm_source=wp.org&utm_medium=tp-description-page&utm_campaign=TPFree) - allows you to translate meta information (like page title, description, url slug, image alt tag, Twitter and Facebook Social Graph tags & more) for boosting your website's SEO and increase traffic
+
+
+= Website =
+
+[translatepress.com](https://translatepress.com/?utm_source=wp.org&utm_medium=tp-description-page&utm_campaign=TPFree)
+
+= Documentation =
+
+[Visit our documentation page](https://translatepress.com/docs/translatepress/?utm_source=wp.org&utm_medium=tp-description-page&utm_campaign=TPFree)
+
+= Add-ons =
+
+[Add-ons](https://translatepress.com/docs/translatepress/?utm_source=wp.org&utm_medium=tp-description-page&utm_campaign=TPFree)
+
+= Demo Site =
+
+You can test out TranslatePress - Multilingual by [visiting our demo site](https://demo.translatepress.com/)
+
+== Installation ==
+
+1. Upload the translatepress folder to the '/wp-content/plugins/' directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Go to Settings -> TranslatePress and choose a translation language.
+4. Open the front-end translation editor from the admin bar to translate your site.
+
+== Frequently Asked Questions ==
+
+= Where are my translations stored? =
+
+All the translation are stored locally in your server's database.
+
+= What types of content can I translate? =
+
+TranslatePress - Multilingual works out of the box with WooCommerce, custom post types, complex themes and site builders, so you'll be able to translate any type of content.
+
+= How is it different from other multilingual & translation plugins? =
+
+TranslatePress is easier to use and more intuitive altogether. No more switching between the editor, string translation interfaces or badly translated plugins. You can now translate the full page content directly from the front-end.
+
+= How do I start to translate my site? =
+
+After installing the plugin, select your secondary language and click "Translate Site" to start translating your entire site exactly as it looks in the front-end.
+
+= Where can I find out more information? =
+
+For more information please check out [TranslatePress documentation](https://translatepress.com/docs/translatepress/?utm_source=wp.org&utm_medium=tp-description-page&utm_campaign=TPFree).
+
+
+== Screenshots ==
+1. Front-end translation editor used to translate the entire page content
+2. How to translate a Dynamic String (gettext) using TranslatePress - Multilingual
+3. Translate Woocommerce Shop Page
+4. Settings Page for TranslatePress - Multilingual
+5. Floating Language Switcher added by TranslatePress - Multilingual
+6. Menu Language Switcher
+
+== Changelog ==
+
+= 1.1.3 =
+* Fix issue where the language switcher didn't work for BuddyPress pages
+* Fixed issue with CDATA in post content that was breaking the translation
+* Added a filter that can be activated and that tries to fix invalid html: trp_try_fixing_invalid_html
+
+= 1.1.2 =
+* We now make sure that all forms when submitted redirect to the correct language
+* Fixed an issue with missing slash from language switcher
+* Fixed an issue where we were not redirecting to the correct url slug when switching languages
+* Fixed a possible notice inside the get_language_names function
+* Fixed html breaking because of unescaped quotes in translated meta content
+* Removed a special character from the full_trim function that was causing some strings to not be selectable for translation
+
+= 1.1.1 =
+* Fixed js error with startsWith method not being supported in IE
+* Removed unnecessary files from select2 lib
+* Improved the way we rewrite urls to remove certain bugs
+
+= 1.1.0 =
+* Implemented View As "Logged out user" functionality so you can translate strings that show only for logged out users
+* Allow slug edit for default language
+* Fixed an issue with the dropdown of translation strings when there were unsaved changes and the dropdown disconected from the textarea
+* Prevent translate editor icon pencil to exit the translation iframe
+* Fixed translating via the next/prev buttons that reset the position in the translation string list
+* Refactor the way we are generating the language url for the language switcher when we don't have a variable available
+
+= 1.0.9 =
+* We now flush permalinks when saving the settings page to avoid getting 404 and 500 errors
+* Added the current language as a class on the body tag. Ex: translatepress-en_US
+* Small readme changes
+
+= 1.0.8 =
+* We now allow HTML in normal strings translations.
+* Changed the way we get the default language permalinks in Woocommerce rewrites
+* Fixed issues with date_i18n function
+* Fixed a warning generated when there are no rewrite rules
+* Fixed dynamic strings not updating the translation dropdown list.
+* Fixed issues with hidden space characters that were breaking some translations
+* Make sure we don't loose the trp-edit-translation=preview from url after a WordPress redirect
+
+= 1.0.7 =
+* Fixed a small bug in js regarding the translation editor sidebar with
+* Fixed Language Switcher for Woocommerce product categories and product tags going to 404 pages
+* Fixed issues with Woocommerce and permalinks when the default language was not english
+* Excluded more functions from getting gettext wraps
+
+= 1.0.6 =
+* Added filter on capabilities to allow other roles to edit translations:'trp_translating_capability'
+* Don't show php errors and notices when we are storing strings in the database
+* Fixed issues with attributes that contain json content, for instance in woocommerce variations
+* We no longer wrap gettext inside the wptexturize function
+* We no longer wrap gettexts that appear in the bloginfo function
+
+= 1.0.5 =
+* Added possibility to edit gettext strings from themes and plugins from english to english, without adding another language. Basically, string-replace functionality.
+* We now can translate text input placeholders
+* We have a way of translating emails using the conditional language shortcode [trp_language language="en_US"] English only content [/trp_language]
+* Fixed issues with some elements that contained new lines and \u00a0 at the start of the strings
+
+= 1.0.4 =
+* Fixed issues with the pencil select icon in the translation editor not showing up in certain cases on the button element
+* Fixed issues with the pencil select icon in the translation editor not showing up in certain cases because of overflow hidden
+* Fixed a issue that was sometimes causing javascript errors with certain plugins
+
+= 1.0.3 =
+* Added a conditional language shortcode: [trp_language language="en_US"] English only content [/trp_language]
+* Create link to test out Google API key.
+* Improvements to Woocommerce compatibility
+* Fixed json_encode error that was causing js errors
+* Changed 'template_include' hook priority to improve compatibility with some themes
+
+= 1.0.2 =
+* Translation interface improvements
+* Fixed issues with strings loaded with ajax
+* Added an addon page
+* Fixed bug with gettext node accidentally wrapping another string too.
+
+= 1.0.1 =
+* Fixed incorrect blog prefix name for Multisite subsites on admin_bar gettext hook.
+* Fixed Translate Page admin bar button sometimes not having the correct url for entering TP Editor Mode
+* Skipped dynamic strings that have only numbers and special characters.
+* Fixed order of categories in Editor dropdown. (Meta Information, String List..)
+* Fixed JS error Uncaught Error: Syntax error, unrecognized expression
+
+= 1.0.0 =
+* Initial release.
