@@ -4,7 +4,8 @@
  * up for a new site matches the key for that user and then displays confirmation.
  *
  * @package WordPress
- */
+ *
+ * testing/
 
 define( 'WP_INSTALLING', true );
 
